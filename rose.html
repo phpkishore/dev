@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Rose with HTML5 Canvas</title>
+</head>
+
+<body>
+	<canvas id="myCanvas" width="500" height="500" style="border-color:#63F;
+      border-style:solid">
+    </canvas>
+    
+	<script>
+		var c = document.getElementById("myCanvas");
+		var ctx = c.getContext('2d');
+		
+		function draw_rose()
+		{
+			ctx.fillStyle = "green";
+			ctx.fillRect(218,240,5,150);
+		
+			ctx.fillStyle = "red";
+			ctx.strokeStyle = "white";
+		
+			ctx.arc(220,190,50,0,2*Math.PI);
+			ctx.fill();
+	
+			ctx.scale(2,1);
+			ctx.fillRect(85,110,50,80);
+	
+			ctx.beginPath();
+			ctx.arc(100,100,20,0,2*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			ctx.closePath();
+	
+			ctx.beginPath();
+			ctx.arc(120,110,20,0,2*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			ctx.closePath();
+	
+			ctx.fillStyle = "green";
+			ctx.beginPath();
+			ctx.arc(90,250,20,0,2*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			ctx.closePath();
+	
+			ctx.beginPath();
+			ctx.arc(130,250,20,0,2*Math.PI);
+			ctx.fill();
+			ctx.stroke();
+			ctx.closePath();
+		}
+		draw_rose();
+
+	</script>
+</body>
+</html>
